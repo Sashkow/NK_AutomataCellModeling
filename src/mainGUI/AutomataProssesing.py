@@ -1,3 +1,7 @@
+import os, sys
+lib_path = os.path.abspath('../')
+sys.path.append(lib_path)
+
 from NK_Network.Automata import NK_Automata
 from NK_Network.Debug import log
 
