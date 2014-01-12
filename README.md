@@ -3,4 +3,4 @@ NK_AutomataCellModeling
 
 Life cell modeling using Kauffman`s NK Automata.
 
-Defeloped in Eclipse with PyDev and Qt
+Developed in Eclipse with PyDev and Qt
