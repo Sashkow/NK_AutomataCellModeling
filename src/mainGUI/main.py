@@ -1,4 +1,4 @@
-
+import os
 import sys
 from PyQt4 import QtGui
 #from myuiwindow import myuiwindow
@@ -65,12 +65,15 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         
     def buttonSlotProceture(self):
         
+        
+        
         N=self.nSlider.value()
         K=self.kSlider.value()
         doAutomata(N, K, self.drawGraphObject)
-        self.genesGraphImageLabel.setPixmap(QtGui.QPixmap('/home/sashko/workspaceEclipse/NK_Network/src/mainGUI/tempPic3.png'))
-        self.statesGraphImageLabel.setPixmap(QtGui.QPixmap('/home/sashko/workspaceEclipse/NK_Network/src/mainGUI/tempPic.png'))
-        self.simplifiedStatesGraphImageLabel.setPixmap(QtGui.QPixmap('/home/sashko/workspaceEclipse/NK_Network/src/mainGUI/tempPic2.png'))
+        
+        self.genesGraphImageLabel.setPixmap(QtGui.QPixmap('tempPic3.png'))
+        self.statesGraphImageLabel.setPixmap(QtGui.QPixmap('tempPic.png'))
+        self.simplifiedStatesGraphImageLabel.setPixmap(QtGui.QPixmap('tempPic2.png'))
 
     def handleValueUpdated(self, value):
         self.progressBar.setValue(value)
