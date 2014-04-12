@@ -80,8 +80,8 @@ class NK_Automata(object):
       
       nextState=self.stepAutomata(currentState)
      
-      #self.stateSpan[currentState.asInt()]=nextState.asInt()
-      self.stateSpan[currentState.asString()[::]]=nextState.asString()[::]
+      self.stateSpan[currentState.asInt()]=nextState.asInt()
+      #self.stateSpan[currentState.asString()[::]]=nextState.asString()[::]
       
   def createStateList(self):
     for stateNumber in range(2**self.N):
@@ -137,10 +137,10 @@ class NK_Automata(object):
   #next state object
   
   def nextState(self,state):
-      nextStateString=self.stateSpan[state.asString()]
-      nextStateNumber=State(nextStateString).stateNumber
-      nextStateObject=self.stateList[nextStateNumber]
-      return nextStateObject
+      #nextStateString=self.stateSpan[state.asString()]
+      #nextStateNumber=State(nextStateString).stateNumber
+      #nextStateObject=self.stateList[nextStateNumber]
+      return self.stateList[self.stateSpan[state.asInt()]]
   ###
   
   def analyseAutomata(self):
